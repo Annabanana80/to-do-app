@@ -17,20 +17,19 @@ function onReady(){
         //create checkbox and attach to primary span container
         let toDoLabel = document.createElement('label');
         toDoLabel.classList.add('mdl-checkbox', 'mdl-js-checkbox', 'mdl-js-ripple-effect', 'newMdl');
-        toDoLabel.htmlFor = 'list-checkbox-1';
         let checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        checkbox.id = 'list-checkbox-1';
+       
         checkbox.classList.add('mdl-checkbox__input', 'newMdl');
-
+        //each checkpoint gets a unique id :)
+        for(var i=0;i<checkbox.length; i++){
+        	checkbox.id = item + i;
+        	toDoLabel.htmlFor = item + i;
+        }
 
         //create text and attach to primary span container
         let labelText = document.createTextNode(newToDoText.value);
         
-
-        //append primary span container container to list item
-        
-
         //create secondary span container
         let deleteContainer = document.createElement('span');
         deleteContainer.classList.add('mdl-list__item-secondary-action', 'newMdl');
