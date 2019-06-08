@@ -1,0 +1,14 @@
+.card-wide.mdl-card {
+  width: 100%;
+}
+.card-wide > .mdl-card__title {
+  color: #fff;
+  height: 300px;
+  background: url('https://i.imgur.com/sLMBTom.jpg?4') center / cover;
+}
+.card-wide > .mdl-card__menu {
+  color: #fff;
+}
+h1, i, #list-checkbox-1{
+	color:indigo;
+}
