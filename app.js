@@ -30,14 +30,13 @@ function onReady() {
 
       let toDoLabel = document.createElement('label');
       toDoLabel.classList.add('mdl-checkbox', 'mdl-js-checkbox', 'mdl-js-ripple-effect', 'newMdl');
-      toDoLabel.htmlFor = 'list-checkbox-1';
-      
+       
       const checkbox = document.createElement('input');
       checkbox.type = "checkbox";
-      checkbox.id = 'list-checkbox-1';
+      checkbox.id = 'toDoItem' + toDo.id;
       checkbox.classList.add('mdl-checkbox__input', 'newMdl');
+      toDoLabel.setAttribute('for', 'toDoItem' + toDo.id);
 
-      //newLi.innerHTML = toDo.title;
       let labelText = document.createTextNode(toDo.title);
 
 
